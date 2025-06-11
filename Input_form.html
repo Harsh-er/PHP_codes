@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body bgcolor="336699">
+        <hr color="yellow">
+        <h1 align="center">ADMISSION FORM</h1>
+        <hr color="yellow">
+        <form style="background-color:#9999CC" action="Output_form.php" method="POST">
+
+            <b>Name:</b>
+            <input type="text" placeholder="First Name" name="first">
+            <input type="text" placeholder="Middle Name" name="middle">
+            <input type="text" placeholder="Last Name" name="last">
+            <br><br>
+            
+            <b>Date of Birth:</b>
+            <input type="date" name="dob">
+            <br><br>
+            
+            <b>Gender:</b>
+            <input type="radio" name="option" value="Male">Male
+            <input type="radio" name="option" value="Female">Female
+            <br><br>  
+
+            <b>Address:</b>
+            <textarea id="Address" placeholder="Address Here" name="Address" rows="2" cols="30"></textarea>
+            <br><br>
+
+            <b>Education Qualification:</b>
+            <select id="edu_qualification" name="EQ">
+                <option value="NULL">Null</option>
+                <option value="10th">10th</option>
+                <option value="11th">11th</option>
+                <option value="12th">12th</option>
+            </select>
+
+            <br><br>  
+
+            <b>Contact No:</b>
+            <input type="tel" placeholder="91-**********" pattern="[0-9]{10}" name="contact_no"> 
+
+            <br><br>
+
+            <b>E-Mail ID:</b> 
+            <input type="email" placeholder="example@gmail.com" name="email_id">
+
+            <br><br> 
+
+            <b>Monthly Pocket Money:</b> 
+            <input type="number" min="100" max="1000" name="MPM">(In Rs)
+            <br><br> 
+
+            <b>Height:</b>
+            <input type="number" min="1" max="300" name="height">
+            <select name="ci">
+                <option>CM</option>
+                <option>Inches</option>
+            </select>
+            <br><br> 
+
+             
+
+            <b>Weight:</b>  
+            <input type="number" placeholder="(in kgs)" min="40" max="150" name="weight">
+             <select name="kl">
+                <option>KGS</option>
+                <option>LBS</option>
+            </select>
+            <br><br>
+
+            <b>Hobbies</b>
+            <br>
+            <input type="checkbox" name="hobby">Sports
+            <input type="checkbox" name="hobby">Coding
+            <br>
+            <input type="checkbox" name="hobby">Reading
+            <input type="checkbox" name="hobby">Networks
+
+            <br><br> 
+
+          <b>College:</b>  
+          <select name="clg">
+                <option>K.P.B Hinduja</option>  
+                <option>K.E.S Shroff </option>
+                <option>R.D National</option>
+                <option>N.L</option> 
+                <option>Sharaf</option>
+            </select>
+
+            <br><br>
+
+            <b>Aadhar Card No:</b>
+            <input type="tel" placeholder="" name="aadhar"> 
+
+            <br><br> 
+
+            <b>Passport No:</b>
+            <input type="text" placeholder="" pattern="[A-Z][0-9]{7}" name="pass"> 
+
+            <br><br>  
+
+            <table border="3px">
+
+                <tr>
+                    <th>Exam Year</th>
+                    <th>Exam Name</th>  
+                    <th>Percentage</th>
+                    <th>Class</th>
+                </tr>
+
+                <tr>
+                    <td><input type="text" placeholder="ex:-2025"></td>
+                    <td><input type="text" placeholder="subject/course"></td>  
+                    <td><input type="number" placeholder="99.99"></td>  
+                    <td><input type="text" placeholder="F.Y.Bsc-IT"></td>
+                </tr>
+            </table>  
+
+
+            <br><br><!-- comment -->
+
+            <input type="button" value="Clear" ><!-- comment -->
+            <input type="submit" value="Submit"><!-- comment -->
+            <input type="reset" value="Reset"><!-- comment -->
+
+        </form>
+    </body>
+</html>
