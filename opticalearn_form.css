@@ -2,14 +2,32 @@
 .boody{
     background:linear-gradient(45deg,#54574e,#23261f);
 }
-.container{
+.container2{
     box-shadow: 5px 5px 8px black;
+    border-radius: 10px;
     margin: 50px auto;
-    width: 0px;
     max-width: 553px;
+    height: 100%;
+    max-height: 2000px;
     background: #a9b594;
     padding: 50px;
-    transition: width 2s;
+}
+#note{
+    font-family: serif;
+    color: black;
+    background-color: white;
+    width: 60px;
+    border: 2px solid black;
+    border-radius: 3px; 
+    font-weight: bold;
+}
+#note1{
+    display: none;
+    font-family: serif;
+    color: black;
+    border: 2px solid black;
+    border-radius: 3px; 
+    font-weight: bold;
 }
 input{
     outline: none;
@@ -17,14 +35,65 @@ input{
 input::placeholder,b{
     color: black;
 }
-button{
-    width: 100px;
-    transition: width 2s;
+.trans{
+    margin-top: 20px;
+    height: 30px;
+    width: 70px;
+    transition: width 1s;
 }
-.transition:hover{
-    width: 553px;
+.trans:hover{
+    width: 100px;
+}
+.blink{
+	animation-name: blinker;
+	animation-duration: 0.6s;
+	animation-iteration-count:infinite;
+}
+@keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.5;}
 }
 
+.up_animation{
+    position :relative;
+    animation-duration: 3s;
+    animation-name: upside;
+}
+@keyframes upside
+{
+    from {bottom:-150px;}
+    to {bottom: 0px;}
+}
+.down_animation{
+    position: relative;
+    animation-duration: 3s;
+    animation-name: downside;
+}
+@keyframes downside
+{
+    from {top:-150px;}
+    to {top:0px;}
+}
+.left_animation{
+    position :relative;
+    animation-duration: 3s;
+    animation-name: leftside;
+}
+@keyframes leftside
+{
+    0% { left:1000px; top:0px;}
+    100% { left:0px; top:0px;}
+}
+.right_animation{
+    position :relative;
+    animation-duration: 3s;
+    animation-name: rightside;
+}
+@keyframes rightside
+{
+     0%   { left:-1000px; top:0px;}
+    100% { left:0px; top:0px;}
+}
 @media (min-width: 0px) and (max-width: 575px)
 {
 
