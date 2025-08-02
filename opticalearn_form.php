@@ -7,10 +7,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link rel="stylesheet" href="opticalearn_form.css">
-        <script src="opticalearn_form.js"></script>    
+        <script src="opticalearn_form.js"></script>
     </head>
     <body class="boody">
-        <form onsubmit="return testerror();" action="" method="POST" enctype="application/x-www-form-urlencoded">
+        <form onsubmit="return testerror();" action="process_admission_form.php" method="POST" enctype="multipart/form-data">
             <div class="container2">
             <div class="md_ad_form wid down_animation">
                 <h2 class="text-center bg-white border border-3 border-black rounded-pill">Admission Form</h2>
@@ -228,7 +228,7 @@
                 </div>
 
                 <div class="col-sm-6 md_ad_form left_animation">
-                    <input class="col-sm-12 wid" type="file" accept="image/png,image/jpeg" name="photo" id="photo">
+                    <input class="col-sm-12 wid" type="file" accept="image/png,image/jpeg,image/jpg" name="photo" id="photo">
                     <div id="photoerror" class="error-design blink"></div>
                 </div>
             </div>

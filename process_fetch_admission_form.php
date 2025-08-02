@@ -16,7 +16,7 @@
 
                     try {
                         $this->datapdo = new PDO("mysql:host=$this->localhost;dbname=$this->dbname;", "root", "");
-                        $this->query = "SELECT first_name,middle_name,last_name,phone,email FROM admission_form";
+                        $this->query = "SELECT roll_no,first_name,middle_name,last_name,phone,email FROM admission_form";
                         $this->result = $this->datapdo->query($this->query);
                     } catch (Exception $a) {
                         echo "dead";
@@ -25,9 +25,9 @@
 
                 function Display() {
                     if ($this->result->rowcount() > 0) {
-                        echo '<table border=2 align=center><tr><th>Name</th><th>Contact</th><th>Email ID</th><th>More Info</th></tr>';
+                        echo '<table border=2 align=center><tr><th>Roll no</th><th>Name</th><th>Contact</th><th>Email ID</th><th>More Info</th></tr>';
                         while ($row = $this->result->fetch(PDO::FETCH_ASSOC)) {
-                            echo '<tr><td>' . $row["first_name"] . ' ' . $row["middle_name"] . ' ' . $row["last_name"] . '</td><td>' . ' ' . $row["phone"] . '</td><td>' . ' ' . $row["email"] . '</td><td> <button>More Info</button> </td></tr>';
+                            echo '<tr><td>'. $row["roll_no"] . ' ' .'</td><td>' . $row["first_name"] . ' ' . $row["middle_name"] . ' ' . $row["last_name"] . '</td><td>' . ' ' . $row["phone"] . '</td><td>' . ' ' . $row["email"] . '</td><td> <button>More Info</button> </td></tr>';
                         }
                         echo '</table>';
                     } else {
