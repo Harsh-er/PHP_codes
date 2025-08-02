@@ -37,7 +37,7 @@ class Single_detail {
                 
             <div class="row mt-5 ">
                 <div class="col-sm-3">
-                    
+                    <div></div>
                 </div>
 
                 <div class="col-sm-3">
